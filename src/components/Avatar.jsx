@@ -1,8 +1,14 @@
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import React, { useEffect, useRef } from "react";
+import { useFBX, useGLTF } from "@react-three/drei";
 
 export function Avatar(props) {
   const { nodes, materials } = useGLTF("/images/3d/avatar.glb");
+  const {animation:typingAnimation} = useFBX("/animations/Typing.fbx")
+  
+
+  useEffect(()=>{
+    console.log(typingAnimation)
+  }, [typingAnimation])
   return (
     <group {...props} dispose={null}>
       <primitive object={nodes.Hips} />
