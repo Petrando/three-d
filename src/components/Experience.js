@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect, useRef } from "react";
 import { Environment, OrbitControls, Sky, ContactShadows, ScrollControls, Scroll, useScroll,
-    Float, MeshDistortMaterial, MeshWobbleMaterial
+    Float, MeshDistortMaterial, MeshWobbleMaterial, Text
 } from "@react-three/drei";
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { MotionConfig, useMotionValue, animate } from "framer-motion";
@@ -124,6 +124,7 @@ const MeInRoom = ({section, setSection, menuOpened}) => {
   
     return (
         <>
+            
             <group
                 position={[ 3.643589412144026, -0.46340000000000003, 4.6749945432746935 ]}
                 rotation={[-3.141592653589793, 0.9313981633974485, 3.141592653589793]}

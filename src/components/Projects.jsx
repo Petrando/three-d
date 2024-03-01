@@ -40,7 +40,6 @@ export const projects = [
     },
 ];
 
-
 const Project = (props) => {
     const { project, highlighted } = props;
 
@@ -75,14 +74,7 @@ const Project = (props) => {
                 toneMapped={false}
                 position-y={0.3}
             />
-             <Text
-                maxWidth={2}
-                
-                fontSize={0.2}
-                position={[-1, -0.4, 0]}
-            >
-                {project.title.toUpperCase()}
-            </Text>
+             
         </group>
     );    
 };
